@@ -4,132 +4,152 @@
         <meta charset="UTF-8" />
         <title>Local Ground</title>
 
-        <link rel="stylesheet" href="styles/style.css">
-
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://www.solodev.com/assets/parallax/jquery.localscroll-1.2.7-min.js"></script>
+		<script src="https://www.solodev.com/assets/parallax/jquery.parallax-1.1.3.js"></script>
+		<script src="https://www.solodev.com/assets/parallax/jquery.scrollTo-1.4.2-min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="javascript/interaction.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
-		<ul class="nav">
-			<li class="nav-item">
-				<a class="nav-link active" href="#">Active</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Link</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Link</a>
-			</li>
-		</ul>
-		<div class="parallax">
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm">
-					<H1 class="text-white">Tell your local story</H1>
-					<p class="text-white">Local Ground is a free, open source online-mapping tool that elevates community voices into compelling, digital stories.</p>
-					<p class="text-white">Data can be transformed into multimedia-rich maps to advocate for ideas, solve problems, and create change.</p>
-					<p class="text-white">Do you have a story to tell?</p>
-					<button>Get Started Now</button>
-				</div>
-				<div class="col-sm">
-				</div>
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+			
+			<a class="navbar-brand" href="#"><img src="assets/logo-dark.png" style="height: 30px;"></a>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+				</ul>
 			</div>
-		</div>
+		</nav>
+		<div class="wrapper">
+			<section id="title-img">
+			</section>
+			<section id="title">
+				<div class="container">
+					<div class="row">
+						<div class="col-md">
+							<H1 class="text-white">Tell your local story</H1>
+							<p class="text-white">Local Ground is a free, open source online-mapping tool that elevates community voices into compelling, digital stories.</p>
+							<p class="text-white">Data can be transformed into multimedia-rich maps to advocate for ideas, solve problems, and create change.</p>
+							<p class="text-white">Do you have a story to tell?</p>
+							<button type="button"  class="btn btn-outline-primary">Get Started Now</button>
+						</div>
+						<div class="col-sm">
+						</div>
+					</div>
+				</div>
+			</section>
 
-		<div class="container">
-			<h2 class="text-center">Make Maps</h2>
-			<p class="text-center">Create story maps that take your visitor on a journey through your data</p>
-			<div class="row">
-				<div class="col-sm">
-					<img class="img-fluid" alt="laptop with map being built on it" src="assets/laptop.png">
+			<section id="make-maps" class="map-bg">
+				<div class="container">
+					<h2 class="text-center">Make Maps</h2>
+					<p class="text-center">Create story maps that take your visitor on a journey through your data</p>
 				</div>
-				<div class="col-sm">
-					<ul class="list-group">
-						<li class="list-group-item">
-							<h3>Personalize</h3>
-							<span>Choose your base map, marker style, fonts and colors</span>
-						</li>
-						<li class="list-group-item">
-							<h3>Visualiza Data</h3>
-							<span>Specify data fields to be collected and displayed.  Add photos, audio files and videos to any place. </span>
-						</li>
-						<li class="list-group-item">
-							<h3>Incorporate sketches and images</h3>
-							<span>Overlay hand drawings and images on your map</span>
-						</li>
-						<li class="list-group-item">
-							<h3>Map your places</h3>
-							<span>Add places by searching for locations or drawing them directly on the map</span>
-						</li>
-					</ul>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm">
+							<img class="img-fluid" alt="laptop with map being built on it" src="assets/laptop.png">
+						</div>
+						<div class="col-sm">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<h3>Personalize</h3>
+									<span>Choose your base map, marker style, fonts and colors</span>
+								</li>
+								<li class="list-group-item">
+									<h3>Visualiza Data</h3>
+									<span>Specify data fields to be collected and displayed.  Add photos, audio files and videos to any place. </span>
+								</li>
+								<li class="list-group-item">
+									<h3>Incorporate sketches and images</h3>
+									<span>Overlay hand drawings and images on your map</span>
+								</li>
+								<li class="list-group-item">
+									<h3>Map your places</h3>
+									<span>Add places by searching for locations or drawing them directly on the map</span>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
+			</section>
 
-		<div class="container">
-			<h2 class="text-center">Collaborate</h2>
-			<p class="text-center">Invite others to participate in your project</p>
-			<div class="row">
-				<div class="col-sm">
-					<ul class="list-group">
-						<li class="list-group-item">
-							<h3>Personalize</h3>
-							<span>Choose your base map, marker style, fonts and colors</span>
-						</li>
-						<li class="list-group-item">
-							<h3>Visualiza Data</h3>
-							<span>Specify data fields to be collected and displayed.  Add photos, audio files and videos to any place. </span>
-						</li>
-						<li class="list-group-item">
-							<h3>Incorporate sketches and images</h3>
-							<span>Overlay hand drawings and images on your map</span>
-						</li>
-						<li class="list-group-item">
-							<h3>Map your places</h3>
-							<span>Add places by searching for locations or drawing them directly on the map</span>
-						</li>
-					</ul>
+			<section id="collaborate">
+				<div class="container">
+					<h2 class="text-center">Collaborate</h2>
+					<p class="text-center">Invite others to participate in your project</p>
 				</div>
-				<div class="col-sm">
-					<img class="img-fluid" alt="Children and a teenager taking photos with a map in the background" src="assets/collaboration.png">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<h3>Personalize</h3>
+									<span>Choose your base map, marker style, fonts and colors</span>
+								</li>
+								<li class="list-group-item">
+									<h3>Visualiza Data</h3>
+									<span>Specify data fields to be collected and displayed.  Add photos, audio files and videos to any place. </span>
+								</li>
+								<li class="list-group-item">
+									<h3>Incorporate sketches and images</h3>
+									<span>Overlay hand drawings and images on your map</span>
+								</li>
+								<li class="list-group-item">
+									<h3>Map your places</h3>
+									<span>Add places by searching for locations or drawing them directly on the map</span>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm">
+							<img class="img-fluid" alt="Children and a teenager taking photos with a map in the background" src="assets/collaboration.png">
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
+			</section>
 
-		<div class="container">
-			<h2 class="text-center">Share</h2>
-			<p class="text-center">Publish your maps to a select group OR to the whole world</p>
-			<div class="row">
-				<div class="col-sm">
-					<img class="img-fluid" alt="A map is drawn on and has a padlock over it" src="assets/map-locks.png">
+			<section id="share">
+				<div class="container map-bg">
+					<h2 class="text-center">Share</h2>
+					<p class="text-center">Publish your maps to a select group OR to the whole world</p>
 				</div>
-				<div class="col-sm">
-					<ul class="list-group">
-						<li class="list-group-item">
-							<h3>Publish your map</h3>
-							<span>Share a link to your map or embed maps in your website or blog</span>
-						</li>
-						<li class="list-group-item">
-							<h3>Decide who can see the map </h3>
-							<span>Decide who can see the map - You have the option of requiring a password to view your map.</span>
-						</li>
-					</ul>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm">
+							<img class="img-fluid" alt="A map is drawn on and has a padlock over it" src="assets/map-locks.png">
+						</div>
+						<div class="col-sm">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<h3>Publish your map</h3>
+									<span>Share a link to your map or embed maps in your website or blog</span>
+								</li>
+								<li class="list-group-item">
+									<h3>Decide who can see the map </h3>
+									<span>Decide who can see the map - You have the option of requiring a password to view your map.</span>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="container">
-			<h2 class="text-center">Get Started Now</h2>
-			<button>Create a Map</button>
-			<button>Explore Maps</button>
+			</section>
+			<section id="get-started">
+				<div class="container">
+					<h2 class="text-center">Get Started Now</h2>
+					<button class="btn">Create a Map</button>
+					<button class="btn">Explore Maps</button>
+				</div>
+			</section>
 		</div>
 	</body>
 </html>

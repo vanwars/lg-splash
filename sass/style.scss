@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,800');
+
 body, html {
     height: 100%;
+    font-family: 'Montserrat';
 }
 
 .parallax {
@@ -17,4 +20,98 @@ body, html {
     position: fixed;
     height: 100vh;
     width: 100vw;
+}
+
+section .container:first-child{
+    padding-top: 100px;
+}
+section .container:last-child{
+    padding-bottom: 100px;
+}
+
+@mixin cover($i, $url) {
+  &:nth-child(#{$i}) {
+    &:after {
+      background-image: url($url);
+    }
+  }
+}
+
+.map-bg{
+    background: url('../assets/map-trace.png');
+}
+
+
+.list-group{
+    box-shadow: none;
+}
+
+.list-group-item{
+    border: none;
+}
+
+
+.wrapper {
+  position: relative;
+  section {
+    position: relative;
+    &:nth-child(n+3):nth-last-child(n) {
+        background: white;
+    }
+    article {
+      width: 50%;
+      margin: 0 auto;
+      padding: 2em 0;
+      p {
+        margin-bottom: 1em;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 40em;
+      width: 100%;
+      background:     
+        linear-gradient(90deg, rgba(1, 0, 21, 0.7), rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    // @include cover(1, "../assets/child-taking-photo.png");
+    // @include cover(2, "http://cdn.eyeem.com/thumb/h/800/4f488e1db3960b9ba1246125e8181e7741564b62-1370076361");
+    // @include cover(3, "http://cdn.eyeem.com/thumb/h/800/8484e67f9b7bef4b2e00ddf0f353f036b4b0e9e6-1348396364");
+    // @include cover(4, "http://cdn.eyeem.com/thumb/h/800/704e38b95cb808b0df338a9661007f93ce3bed98-1348321831");
+    // @include cover(5, "http://cdn.eyeem.com/thumb/h/800/20b3440516db8c8df4490b17ba3109d91c07f839-1348321287");
+    // @include cover(6, "http://cdn.eyeem.com/thumb/h/800/d90429ba407c439beae9d23e468dc9c1deb7efdd-1348357036");
+  }
+
+
+//Typography
+h1{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+#title p{
+    font-size: 20px;
+    letter-spacing: .02em;
+}
+
+
+
+
+
 }
