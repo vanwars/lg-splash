@@ -22,10 +22,8 @@ body, html {
     width: 100vw;
 }
 
-section .container:first-child{
+section .container{
     padding-top: 100px;
-}
-section .container:last-child{
     padding-bottom: 100px;
 }
 
@@ -77,10 +75,10 @@ section .container:last-child{
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      height: 40em;
+      height: 50em;
       width: 100%;
       background:     
-        linear-gradient(90deg, rgba(1, 0, 21, 0.7), rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
+        linear-gradient(90deg, rgba(0, 7, 30, 0.9), rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -105,9 +103,18 @@ h2{
     font-size: 40px;
 }
 
+.tracked{
+    letter-spacing: .1em;
+}
+
+#title{ 
+  padding-top: 4.5rem; /*to offset content for the fixed navigation*/
+}
+
 #title p{
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: .02em;
+
 }
 
 

@@ -4,16 +4,19 @@
         <meta charset="UTF-8" />
         <title>Local Ground</title>
 
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script src="https://www.solodev.com/assets/parallax/jquery.localscroll-1.2.7-min.js"></script>
-		<script src="https://www.solodev.com/assets/parallax/jquery.parallax-1.1.3.js"></script>
-		<script src="https://www.solodev.com/assets/parallax/jquery.scrollTo-1.4.2-min.js"></script>
+
 
 		<!-- Latest compiled and minified JavaScript -->
-		<script src="javascript/interaction.js" crossorigin="anonymous"></script>
+		<script src="javascript/interaction.js"></script>
         <link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
@@ -38,11 +41,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md">
-							<H1 class="text-white">Tell your local story</H1>
-							<p class="text-white">Local Ground is a free, open source online-mapping tool that elevates community voices into compelling, digital stories.</p>
-							<p class="text-white">Data can be transformed into multimedia-rich maps to advocate for ideas, solve problems, and create change.</p>
+							<span class="text-white text-uppercase tracked">Local Ground</span>
+							<H1 class="text-white font-weight-bold">Tell your community's story</H1>
+							<p class="text-white">Local Ground is a free, open source online mapping tool that elevates community voices into compelling, digital stories.</p>
+							<p class="text-white">Transform data into multimedia-rich maps to advocate for ideas, solve problems, and create change.</p>
 							<p class="text-white">Do you have a story to tell?</p>
-							<button type="button"  class="btn btn-outline-primary">Get Started Now</button>
+							<button type="button"  class="btn btn-outline-light">Get Started Now</button>
 						</div>
 						<div class="col-sm">
 						</div>
@@ -52,10 +56,11 @@
 
 			<section id="make-maps" class="map-bg">
 				<div class="container">
+					<div  class="text-center">
+						<img class="img-fluid" style="max-height:200px;margin-bottom:-50px" src="assets/map-pins.png">
+					</div>
 					<h2 class="text-center">Make Maps</h2>
-					<p class="text-center">Create story maps that take your visitor on a journey through your data</p>
-				</div>
-				<div class="container">
+					<p class="text-center mb-5">Create story maps that take your visitor on a journey through your data</p>
 					<div class="row">
 						<div class="col-sm">
 							<img class="img-fluid" alt="laptop with map being built on it" src="assets/laptop.png">
@@ -67,7 +72,7 @@
 									<span>Choose your base map, marker style, fonts and colors</span>
 								</li>
 								<li class="list-group-item">
-									<h3>Visualiza Data</h3>
+									<h3>Visualize Data</h3>
 									<span>Specify data fields to be collected and displayed.  Add photos, audio files and videos to any place. </span>
 								</li>
 								<li class="list-group-item">
@@ -88,8 +93,6 @@
 				<div class="container">
 					<h2 class="text-center">Collaborate</h2>
 					<p class="text-center">Invite others to participate in your project</p>
-				</div>
-				<div class="container">
 					<div class="row">
 						<div class="col-sm">
 							<ul class="list-group">
@@ -98,7 +101,7 @@
 									<span>Choose your base map, marker style, fonts and colors</span>
 								</li>
 								<li class="list-group-item">
-									<h3>Visualiza Data</h3>
+									<h3>Visualize Data</h3>
 									<span>Specify data fields to be collected and displayed.  Add photos, audio files and videos to any place. </span>
 								</li>
 								<li class="list-group-item">
@@ -119,11 +122,9 @@
 			</section>
 
 			<section id="share">
-				<div class="container map-bg">
+				<div class="container ">
 					<h2 class="text-center">Share</h2>
 					<p class="text-center">Publish your maps to a select group OR to the whole world</p>
-				</div>
-				<div class="container">
 					<div class="row">
 						<div class="col-sm">
 							<img class="img-fluid" alt="A map is drawn on and has a padlock over it" src="assets/map-locks.png">
@@ -143,7 +144,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="get-started">
+			<section id="get-started" class="map-bg">
 				<div class="container">
 					<h2 class="text-center">Get Started Now</h2>
 					<button class="btn">Create a Map</button>
