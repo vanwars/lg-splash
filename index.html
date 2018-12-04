@@ -15,8 +15,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="javascript/interaction.js"></script>
+
         <link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
@@ -34,7 +33,7 @@
 				</ul>
 			</div>
 		</nav>
-		<div class="wrapper">
+		<div class="wrapper" id="splash">
 			<section id="title-img">
 			</section>
 			<section id="title">
@@ -54,7 +53,7 @@
 				</div>
 			</section>
 
-			<section id="make-maps" class="map-bg">
+			<section id="make-maps" class="bg-white">
 				<div class="container">
 					<div  class="text-center">
 						<img class="img-fluid" style="max-height:200px;margin-bottom:-50px" src="assets/map-pins.png">
@@ -63,7 +62,9 @@
 					<p class="text-center mb-5">Create story maps that take your visitor on a journey through your data</p>
 					<div class="row">
 						<div class="col-sm">
-							<img class="img-fluid" alt="laptop with map being built on it" src="assets/laptop.png">
+							<div class="animation-element bounce-up">
+								<img class="img-fluid" alt="laptop with map being built on it" src="assets/laptop.png">
+							</div>
 						</div>
 						<div class="col-sm">
 							<ul class="list-group">
@@ -89,7 +90,7 @@
 				</div>
 			</section>
 
-			<section id="collaborate">
+			<section id="collaborate" class="bg-light">
 				<div class="container">
 					<h2 class="text-center">Collaborate</h2>
 					<p class="text-center">Invite others to participate in your project</p>
@@ -115,19 +116,23 @@
 							</ul>
 						</div>
 						<div class="col-sm">
-							<img class="img-fluid" alt="Children and a teenager taking photos with a map in the background" src="assets/collaboration.png">
+							<div class="animation-element bounce-up">
+								<img class="img-fluid" alt="Children and a teenager taking photos with a map in the background" src="assets/collaboration.png">
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section id="share">
-				<div class="container ">
+			<section id="share" class="bg-white">
+				<div class="container">
 					<h2 class="text-center">Share</h2>
 					<p class="text-center">Publish your maps to a select group OR to the whole world</p>
 					<div class="row">
 						<div class="col-sm">
-							<img class="img-fluid" alt="A map is drawn on and has a padlock over it" src="assets/map-locks.png">
+							<div class="animation-element bounce-up">
+								<img class="img-fluid" alt="A map is drawn on and has a padlock over it" src="assets/map-locks.png">
+							</div>
 						</div>
 						<div class="col-sm">
 							<ul class="list-group">
@@ -144,13 +149,17 @@
 					</div>
 				</div>
 			</section>
-			<section id="get-started" class="map-bg">
-				<div class="container">
-					<h2 class="text-center">Get Started Now</h2>
-					<button class="btn">Create a Map</button>
-					<button class="btn">Explore Maps</button>
+			<section id="get-started">
+				<div class="container text-center">
+					<h2 class="text-center text-white">Get Started Now</h2>
+					<button class="btn btn-outline-light">Create a Map</button>
+					<button class="btn btn-outline-light">Explore Maps</button>
 				</div>
 			</section>
 		</div>
+
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="javascript/interaction.js"></script>
 	</body>
 </html>

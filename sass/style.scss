@@ -40,12 +40,15 @@ section .container{
 }
 
 
+
+
 .list-group{
     box-shadow: none;
 }
 
 .list-group-item{
     border: none;
+    background: none;
 }
 
 
@@ -53,9 +56,6 @@ section .container{
   position: relative;
   section {
     position: relative;
-    &:nth-child(n+3):nth-last-child(n) {
-        background: white;
-    }
     article {
       width: 50%;
       margin: 0 auto;
@@ -67,7 +67,7 @@ section .container{
         }
       }
     }
-    &:after {
+    &:not(:last-child):after {
       content: "";
       display: block;
       position: absolute;
@@ -93,14 +93,31 @@ section .container{
     // @include cover(6, "http://cdn.eyeem.com/thumb/h/800/d90429ba407c439beae9d23e468dc9c1deb7efdd-1348357036");
   }
 
+    #share::after {
+      background:     
+        linear-gradient(90deg, rgba(0, 7, 30, 0.9), rgba(6, 0, 104, 0)), url("../assets/bg-map.png") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-attachment: fixed;
+    }
 
-//Typography
-h1{
-    font-size: 60px;
 }
+//Typography
+#splash{
+    h1{
+        font-size: 60px;
+    }
 
-h2{
-    font-size: 40px;
+    h2{
+        font-size: 50px;
+    }
+
+    span,
+    p{
+        font-size: 18px;
+    }
 }
 
 .tracked{
@@ -118,7 +135,37 @@ h2{
 }
 
 
-
-
-
+.bg-pasadena{
+    background: url("../assets/pasadena-map.png");
 }
+
+
+
+/*bounce up animation for the subject*/
+
+.bounce-up{
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 100px, 0px);
+  -webkit-transform: translate3d(0px, 100px, 0px);
+  -o-transform: translate(0px, 100px);
+  -ms-transform: translate(0px, 100px);
+  transform: translate3d(0px, 100, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view{
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+

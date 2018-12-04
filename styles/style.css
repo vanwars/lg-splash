@@ -28,14 +28,13 @@ section .container {
   box-shadow: none; }
 
 .list-group-item {
-  border: none; }
+  border: none;
+  background: none; }
 
 .wrapper {
   position: relative; }
   .wrapper section {
     position: relative; }
-    .wrapper section:nth-child(n+3):nth-last-child(n) {
-      background: white; }
     .wrapper section article {
       width: 50%;
       margin: 0 auto;
@@ -44,7 +43,7 @@ section .container {
         margin-bottom: 1em; }
         .wrapper section article p:last-of-type {
           margin-bottom: 0; }
-    .wrapper section:after {
+    .wrapper section:not(:last-child):after {
       content: "";
       display: block;
       position: absolute;
@@ -60,17 +59,58 @@ section .container {
       -o-background-size: cover;
       background-size: cover;
       background-attachment: fixed; }
-  .wrapper h1 {
-    font-size: 60px; }
-  .wrapper h2 {
-    font-size: 40px; }
-  .wrapper .tracked {
-    letter-spacing: .1em; }
-  .wrapper #title {
-    padding-top: 4.5rem;
-    /*to offset content for the fixed navigation*/ }
-  .wrapper #title p {
-    font-size: 16px;
-    letter-spacing: .02em; }
+  .wrapper #share::after {
+    background: linear-gradient(90deg, rgba(0, 7, 30, 0.9), rgba(6, 0, 104, 0)), url("../assets/bg-map.png") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed; }
+
+#splash h1 {
+  font-size: 60px; }
+#splash h2 {
+  font-size: 50px; }
+#splash span,
+#splash p {
+  font-size: 18px; }
+
+.tracked {
+  letter-spacing: .1em; }
+
+#title {
+  padding-top: 4.5rem;
+  /*to offset content for the fixed navigation*/ }
+
+#title p {
+  font-size: 16px;
+  letter-spacing: .02em; }
+
+.bg-pasadena {
+  background: url("../assets/pasadena-map.png"); }
+
+/*bounce up animation for the subject*/
+.bounce-up {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 100px, 0px);
+  -webkit-transform: translate3d(0px, 100px, 0px);
+  -o-transform: translate(0px, 100px);
+  -ms-transform: translate(0px, 100px);
+  transform: translate3d(0px, 100, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.bounce-up.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px); }
 
 /*# sourceMappingURL=style.css.map */
