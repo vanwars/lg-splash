@@ -19,9 +19,9 @@
         <link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar fixed-top navbar-expand-lg" id="topNavbar">
 			
-			<a class="navbar-brand" href="#"><img src="assets/logo-dark.png" style="height: 30px;"></a>
+			<a class="navbar-brand text-uppercase tracked font-weight-bold" href="#">Local Ground</a>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
@@ -40,10 +40,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md">
-							<span class="text-white text-uppercase tracked">Local Ground</span>
+							<!-- <span class="text-white text-uppercase tracked">Local Ground</span> -->
 							<H1 class="text-white font-weight-bold">Tell your community's story</H1>
 							<p class="text-white">Local Ground is a free, open source online mapping tool that elevates community voices into compelling, digital stories.</p>
-							<p class="text-white">Transform data into multimedia-rich maps to advocate for ideas, solve problems, and create change.</p>
+							<p class="text-white mb-5">Transform data into multimedia-rich maps to advocate for ideas, solve problems, and create change.</p>
 							<p class="text-white">Do you have a story to tell?</p>
 							<button type="button"  class="btn btn-outline-light">Get Started Now</button>
 						</div>
@@ -52,25 +52,40 @@
 					</div>
 				</div>
 			</section>
+<!-- 			<section>
+				TODO:Add summary
+			</section> -->
 
-			<section id="make-maps" class="bg-white">
+			<section id="make-maps" class="bg-white map-background">
 				<div class="container">
-					<div  class="text-center">
+<!-- 					<div  class="text-center">
 						<img class="img-fluid" style="max-height:200px;margin-bottom:-50px" src="assets/map-pins.png">
-					</div>
-					<h2 class="text-center">Make Maps</h2>
-					<p class="text-center mb-5">Create story maps that take your visitor on a journey through your data</p>
+					</div> -->
 					<div class="row">
+<!-- 						<div class="col-lg">
+							<img class="img-fluid map-pins" style="max-height:200px;" src="assets/map-pins.svg">
+						</div> -->
+						<div class="col-lg">
+							<h2 class="text-center">Make Maps</h2>
+							<p class="text-center">Create story maps that take your visitor on a journey through your data</p>
+						</div>
+<!-- 						<div class="col-lg">
+							<img class="img-fluid map-pins" style="max-height:200px;  -webkit-transform: scaleX(-1);transform: scaleX(-1);" src="assets/map-pins.svg">
+						</div> -->
+					</div>
+					<div class="row pt-5">
 						<div class="col-sm">
 							<div class="animation-element bounce-up">
-								<img class="img-fluid" alt="laptop with map being built on it" src="assets/laptop.png">
+								<img class="img-fluid" alt="laptop with map being built on it" src="assets/laptop-imgs/laptop.png">
+								<img style="position:absolute;left:0;top:0;" class="img-fluid animation-element fade-in" alt="laptop with map being built on it" src="assets/laptop-imgs/map.png">
+								<img style="position:absolute;left:0;top:0;" class="img-fluid animation-element bounce-down" alt="laptop with map being built on it" src="assets/laptop-imgs/overlay.png"><img style="position:absolute;left:0;top:0;" class="img-fluid animation-element bounce-down" alt="laptop with map being built on it" src="assets/laptop-imgs/data-points.svg">						
 							</div>
 						</div>
 						<div class="col-sm">
 							<ul class="list-group">
 								<li class="list-group-item">
 									<h3>Personalize</h3>
-									<span>Choose your base map, marker style, fonts and colors</span>
+									<span>Choose your map, map marker style, fonts and colors</span>
 								</li>
 								<li class="list-group-item">
 									<h3>Visualize Data</h3>
@@ -90,30 +105,43 @@
 				</div>
 			</section>
 
-			<section id="collaborate" class="bg-light">
+			<section id="collaborate" class="bg-light map-background-02">
 				<div class="container">
-					<h2 class="text-center">Collaborate</h2>
-					<p class="text-center">Invite others to participate in your project</p>
-					<div class="row">
+					<div class="row mb-5">
 						<div class="col-sm">
-							<ul class="list-group">
-								<li class="list-group-item">
-									<h3>Personalize</h3>
-									<span>Choose your base map, marker style, fonts and colors</span>
-								</li>
-								<li class="list-group-item">
-									<h3>Visualize Data</h3>
-									<span>Specify data fields to be collected and displayed.  Add photos, audio files and videos to any place. </span>
-								</li>
-								<li class="list-group-item">
-									<h3>Incorporate sketches and images</h3>
-									<span>Overlay hand drawings and images on your map</span>
-								</li>
-								<li class="list-group-item">
-									<h3>Map your places</h3>
-									<span>Add places by searching for locations or drawing them directly on the map</span>
-								</li>
-							</ul>
+							<h2 class="text-center">Collaborate</h2>
+							<p class="text-center">Invite others to participate in your project</p>
+						</div>
+					</div>
+					<div class="row pt-5">
+						<div class="col-sm">
+							<div class="media">
+								<div class="media-left">
+									<img class="media-object" src="assets/icons/Personalize.png">
+								</div>
+								<div class="media-body">
+									<h3>Work together</h3>
+									<span>Multiple people or remote teams can work concurrently on a map</span>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-left">
+									<img class="media-object" src="assets/icons/VisualizeData.png">
+								</div>
+								<div class="media-body">
+									<h3>Share data</h3>
+									<span>Individual maps can be created showing different views of a jointly made dataset </span>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-left">
+									<img class="media-object" src="assets/icons/VisualizeData.png">
+								</div>
+								<div class="media-body">
+									<h3>Learn data science</h3>
+									<span>Great for classroom or community-based projects</span>
+								</div>
+							</div>
 						</div>
 						<div class="col-sm">
 							<div class="animation-element bounce-up">
@@ -124,14 +152,20 @@
 				</div>
 			</section>
 
-			<section id="share" class="bg-white">
+			<section id="share" class="bg-white map-background-02">
 				<div class="container">
-					<h2 class="text-center">Share</h2>
-					<p class="text-center">Publish your maps to a select group OR to the whole world</p>
 					<div class="row">
 						<div class="col-sm">
-							<div class="animation-element bounce-up">
-								<img class="img-fluid" alt="A map is drawn on and has a padlock over it" src="assets/map-locks.png">
+							<h2 class="text-center">Share</h2>
+							<p class="text-center">Publish your maps to a select group OR to the whole world</p>
+						</div>
+					</div>
+					<div class="row pt-5">
+						<div class="col-sm">
+							<div class="animation-element bounce-up text-center">
+								<img style="position:relative;z-index:3;top:0;left:0;max-width:400px;" class="img-fluid" alt="laptop with map being built on it" src="assets/map.png">
+								<img style="position:absolute;z-index:2;top:0;left:0;max-width:400px;left:0;right:0;margin:auto;" class="img-fluid animation-element bounce-up" alt="laptop with map being built on it" src="assets/arrows.png">				
+								<img style="position:absolute;z-index:4;top:0;left:0;max-width:400px;left:0;right:0;margin:auto;" class="img-fluid animation-element bounce-down" alt="laptop with map being built on it" src="assets/lock.png">					
 							</div>
 						</div>
 						<div class="col-sm">
@@ -161,5 +195,6 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="javascript/interaction.js"></script>
+
 	</body>
 </html>
