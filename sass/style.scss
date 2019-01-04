@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,800');
 
+
+@import "bootstrap-4.0.0/scss/bootstrap.scss";
+@import "bootstrap-4.0.0/scss/_grid.scss";
+@import "bootstrap-4.0.0/scss/_mixins.scss";
+@import "bootstrap-4.0.0/scss/_nav.scss";
+@import "bootstrap-4.0.0/scss/_navbar.scss";
+
+
+
+
 body, html {
     height: 100%;
     font-family: 'Montserrat';
@@ -36,17 +46,27 @@ section .container{
 }
 
 .map-bg{
-    background: url('../assets/map-trace.png');
+    background-size: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+    .map-bg{
+        background-size: 200%;
+    }
 }
 
 .map-background{
     background: url("../assets/pasadena-map.png");
     background-repeat: no-repeat;
-    background-size: 100%;
 }
 
 .map-background-02{
     background: url("../assets/berkeley-map.png");
+    background-repeat: no-repeat;
+}
+
+.map-background-03{
+    background: url("../assets/mission-map.png");
     background-repeat: no-repeat;
 }
 
@@ -213,13 +233,42 @@ section .container{
   opacity: 1;
 }
 
+.bg-light{
+    background-color: #FAFAFC !important;
+}
+
 .navbar{
     transition: all 0.5s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+}
+
+.navbar-light{
+    box-shadow: 0 .125rem .25rem rgba(35,45,76, .07) !important;
 }
 
 .navbar-brand{
     padding: 0;
 }
+
+.btn-primary{
+    background-color:#63A989;
+    border-color:#63A989;
+    color: white;
+}
+
+
+// $mynewcolor:#63A989;
+
+// .btn-primary {
+//     @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
+// }
+
+// .btn-outline-primary {
+//     @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor);
+// }
 
 
 .media-object{
