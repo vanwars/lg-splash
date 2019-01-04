@@ -1,138 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,800');
 
+/***********************************
+Table of Contents
+
+1. Typography
+2. Buttons
+3. Backgrounds
+4. Animation
+5. Navigation
+6. Lists
+7. Cards
+
+***********************************/
+
 
 @import "bootstrap-4.0.0/scss/bootstrap.scss";
-@import "bootstrap-4.0.0/scss/_grid.scss";
-@import "bootstrap-4.0.0/scss/_mixins.scss";
-@import "bootstrap-4.0.0/scss/_nav.scss";
-@import "bootstrap-4.0.0/scss/_navbar.scss";
 
 
-
+/***********************************
+1. Typography
+***********************************/
 
 body, html {
     height: 100%;
     font-family: 'Montserrat';
 }
 
-.parallax {
-    /* The image used */
-    background-image: url('../assets/child-taking-photo.png');
-
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-}
-
-section .container{
-    padding-top: 70px;
-    padding-bottom: 100px;
-}
-
-@mixin cover($i, $url) {
-  &:nth-child(#{$i}) {
-    &:after {
-      background-image: url($url);
-    }
-  }
-}
-
-.map-bg{
-    background-size: 100%;
-}
-
-@include media-breakpoint-up(sm) {
-    .map-bg{
-        background-size: 200%;
-    }
-}
-
-.map-background{
-    background: url("../assets/pasadena-map.png");
-    background-repeat: no-repeat;
-}
-
-.map-background-02{
-    background: url("../assets/berkeley-map.png");
-    background-repeat: no-repeat;
-}
-
-.map-background-03{
-    background: url("../assets/mission-map.png");
-    background-repeat: no-repeat;
-}
-
-.list-group{
-    box-shadow: none;
-}
-
-.list-group-item{
-    border: none;
-    background: none;
-}
-
-
-.wrapper {
-  position: relative;
-  section {
-    position: relative;
-    article {
-      width: 50%;
-      margin: 0 auto;
-      padding: 2em 0;
-      p {
-        margin-bottom: 1em;
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-    }
-    &:not(:last-child):after {
-      content: "";
-      display: block;
-      position: absolute;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      height: 50em;
-      width: 100%;
-      background:     
-        linear-gradient(90deg, #232D4C, rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-    // @include cover(1, "../assets/child-taking-photo.png");
-    // @include cover(2, "http://cdn.eyeem.com/thumb/h/800/4f488e1db3960b9ba1246125e8181e7741564b62-1370076361");
-    // @include cover(3, "http://cdn.eyeem.com/thumb/h/800/8484e67f9b7bef4b2e00ddf0f353f036b4b0e9e6-1348396364");
-    // @include cover(4, "http://cdn.eyeem.com/thumb/h/800/704e38b95cb808b0df338a9661007f93ce3bed98-1348321831");
-    // @include cover(5, "http://cdn.eyeem.com/thumb/h/800/20b3440516db8c8df4490b17ba3109d91c07f839-1348321287");
-    // @include cover(6, "http://cdn.eyeem.com/thumb/h/800/d90429ba407c439beae9d23e468dc9c1deb7efdd-1348357036");
-  }
-
-    #share::after {
-      background:     
-        linear-gradient(90deg, rgba(0, 7, 30, 0.9), rgba(6, 0, 104, 0)), url("../assets/bg-map.png") no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-}
-//Typography
 #splash{
     h1{
         font-size: 60px;
@@ -163,20 +56,71 @@ section .container{
 }
 
 
-.bg-pasadena{
-    background: url("../assets/pasadena-map.png");
+/***********************************
+2. Buttons
+***********************************/
+
+
+
+.btn-primary{
+    @include button-variant($green, $green);
 }
 
 
 
-/*bounce up animation for the subject*/
+/***********************************
+3. Backgrounds
+***********************************/
 
+
+
+
+.bg-pasadena{
+    background: url("../assets/pasadena-map.png");
+}
+
+.bg-light{
+    background-color: #FAFAFC !important;
+}
+
+.map-bg{
+    background-size: 100%;
+}
+
+.map-background{
+    background: url("../assets/pasadena-map.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.map-background-02{
+    background: url("../assets/berkeley-map.png");
+    background-repeat: no-repeat;
+     background-size: 100%;
+}
+
+.map-background-03{
+    background: url("../assets/mission-map.png");
+    background-repeat: no-repeat;
+     background-size: 100%;
+}
+
+@include media-breakpoint-down(sm) {
+    .map-background-03,
+    .map-background-02,
+    .map-background{
+        background-size: 200%;
+    }
+}
+
+/***********************************
+4. Animation
+***********************************/
+
+/*bounce up animation for the subject*/
 .bounce-up{
   opacity: 0;
-  -moz-transition: all 700ms ease-out;
-  -webkit-transition: all 700ms ease-out;
-  -o-transition: all 700ms ease-out;
-  transition: all 700ms ease-out;
+  @include transition(all 700ms ease-out);
   -moz-transform: translate3d(0px, 100px, 0px);
   -webkit-transform: translate3d(0px, 100px, 0px);
   -o-transform: translate(0px, 100px);
@@ -188,7 +132,6 @@ section .container{
 }
 
 /*bounce up animation for the subject*/
-
 .bounce-down{
   opacity: 0;
   -moz-transition: all 700ms ease-out;
@@ -233,9 +176,11 @@ section .container{
   opacity: 1;
 }
 
-.bg-light{
-    background-color: #FAFAFC !important;
-}
+/***********************************
+5. Navigation
+***********************************/
+
+
 
 .navbar{
     transition: all 0.5s ease;
@@ -253,26 +198,114 @@ section .container{
     padding: 0;
 }
 
-.btn-primary{
-    background-color:#63A989;
-    border-color:#63A989;
-    color: white;
+/***********************************
+6. Lists
+***********************************/
+
+.list-group{
+    box-shadow: none;
+}
+
+.list-group-item{
+    border: none;
+    background: none;
 }
 
 
-// $mynewcolor:#63A989;
-
-// .btn-primary {
-//     @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
-// }
-
-// .btn-outline-primary {
-//     @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor);
-// }
+/***********************************
+7. Cards
+***********************************/
 
 
-.media-object{
-    max-width: 40px;
-    padding: 2px 6px 4px 0;
+.card{
+    border: none;
+}
+
+
+
+
+.parallax {
+    /* The image used */
+    background-image: url('../assets/child-taking-photo.png');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+section .container{
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+@mixin cover($i, $url) {
+  &:nth-child(#{$i}) {
+    &:after {
+      background-image: url($url);
+    }
+  }
+}
+
+
+
+.wrapper {
+  position: relative;
+  section {
+    position: relative;
+    article {
+      width: 50%;
+      margin: 0 auto;
+      padding: 2em 0;
+      p {
+        margin-bottom: 1em;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &:not(:last-child):after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 50em;
+      width: 100%;
+      background:     
+        linear-gradient(90deg, $purple, rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    // @include cover(1, "../assets/child-taking-photo.png");
+    // @include cover(2, "http://cdn.eyeem.com/thumb/h/800/4f488e1db3960b9ba1246125e8181e7741564b62-1370076361");
+    // @include cover(3, "http://cdn.eyeem.com/thumb/h/800/8484e67f9b7bef4b2e00ddf0f353f036b4b0e9e6-1348396364");
+    // @include cover(4, "http://cdn.eyeem.com/thumb/h/800/704e38b95cb808b0df338a9661007f93ce3bed98-1348321831");
+    // @include cover(5, "http://cdn.eyeem.com/thumb/h/800/20b3440516db8c8df4490b17ba3109d91c07f839-1348321287");
+    // @include cover(6, "http://cdn.eyeem.com/thumb/h/800/d90429ba407c439beae9d23e468dc9c1deb7efdd-1348357036");
+  }
+
+    #share::after {
+      background:     
+        linear-gradient(90deg, rgba(0, 7, 30, 0.9), rgba(6, 0, 104, 0)), url("../assets/bg-map.png") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
 }
 
