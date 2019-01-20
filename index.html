@@ -5,13 +5,7 @@
         <title>Local Ground</title>
 
         <script
-			  src="https://code.jquery.com/jquery-3.3.1.js"
-			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-			  crossorigin="anonymous"></script>
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+			  src="javascript/jquery.js"></script>
 
 
         <link rel="stylesheet" href="styles/style.css">
@@ -19,14 +13,11 @@
 	<body>
 		<nav class="navbar fixed-top navbar-expand-lg" id="topNavbar">
 			
-			<a class="navbar-brand text-uppercase tracked font-weight-bold" href="#">Local Ground</a>
+			<a class="navbar-brand" href="#"><div id="logo"></div></a>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
+						<a class="nav-link" href="#">About</a>
 					</li>
 					<button class="btn btn-primary" href="#">Get Started</button>
 				</ul>
@@ -37,7 +28,7 @@
 			</section>
 			<section id="title">
 				<div class="container">
-					<div class="row">
+					<div class="row mb-5">
 						<div class="col-md">
 							<!-- <span class="text-white text-uppercase tracked">Local Ground</span> -->
 							<H1 class="text-white font-weight-bold">Tell your community's story</H1>
@@ -142,20 +133,20 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm">
-							<h2 class="text-center font-weight-bold">Share</h2>
+							<h2 class="text-center font-weight-bold ">Share</h2>
 							<p class="text-center">Publish your maps to a select group OR to the whole world</p>
 						</div>
 					</div>
 					<div class="row pt-5">
 						<div class="col-sm">
-							<div class="animation-element bounce-up text-center">
-								<img style="position:relative;z-index:3;top:0;left:0;max-width:400px;" class="img-fluid" alt="laptop with map being built on it" src="assets/map.png">
-								<img style="position:absolute;z-index:2;top:0;left:0;max-width:400px;left:0;right:0;margin:auto;" class="img-fluid animation-element bounce-up" alt="laptop with map being built on it" src="assets/arrows.png">				
-								<img style="position:absolute;z-index:4;top:0;left:0;max-width:400px;left:0;right:0;margin:auto;" class="img-fluid animation-element bounce-down" alt="laptop with map being built on it" src="assets/lock.png">					
+							<div class="animation-element bounce-up text-center" style="max-width:400px;margin:auto;">
+								<img style="position:relative;z-index:3;top:0;left:0;" class="img-fluid" alt="laptop with map being built on it" src="assets/map.png">
+								<img style="position:absolute;z-index:2;top:0;left:0;left:0;right:0;margin:auto;" class="img-fluid animation-element bounce-up" alt="laptop with map being built on it" src="assets/arrows.png">				
+								<img style="position:absolute;z-index:4;top:0;left:0;left:0;right:0;margin:auto;" class="img-fluid animation-element bounce-down" alt="laptop with map being built on it" src="assets/lock.png">					
 							</div>
 						</div>
 						<div class="col-sm">
-							<ul class="list-group">
+							<ul class="list-group mt-5">
 								<li class="list-group-item">
 									<h3>Publish your map</h3>
 									<span>Share a link to your map or embed maps in your website or blog</span>
@@ -171,9 +162,29 @@
 			</section>
 			<section id="get-started">
 				<div class="container text-center">
-					<h2 class="text-center text-white">Get Started Now</h2>
-					<button class="btn btn-outline-light">Create a Map</button>
-					<button class="btn btn-outline-light">Explore Maps</button>
+					<h2 class="text-center text-white font-weight-bold">Get Started Now</h2>
+					<div class="row pt-5 pb-5">
+						<div class="col">
+							<button class="btn btn-outline-light">Create a Map</button>
+							<button class="btn btn-outline-light">Explore Maps</button>
+						</div>
+					</div>
+					<div class="card-deck">
+					  <div class="card">
+					    <img class="card-img-top" src="assets/sample-projects/oakland-port.png" alt="Card image cap">
+					    <div class="card-body">
+					      <h5 class="card-title">Oakland Air Quality</h5>
+					      <p class="card-text">Oakland citizens collected air quality data to advocate for the city to take action</p>
+					    </div>
+					  </div>
+					  <div class="card">
+					    <img class="card-img-top" src="assets/sample-projects/la-pena-detail.png" alt="Card image cap">
+					    <div class="card-body">
+					      <h5 class="card-title">Berkeley Murals</h5>
+					      <p class="card-text">Murals in Berkeley reflect demographics and community values</p>
+					    </div>
+					  </div>
+					</div>
 				</div>
 			</section>
 		</div>
