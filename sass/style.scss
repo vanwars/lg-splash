@@ -45,7 +45,7 @@ body, html {
 
 #splash{
     h1{
-        font-size: 60px;
+        font-size: 72px;
     }
 
     h2{
@@ -56,6 +56,7 @@ body, html {
     p{
         font-size: 18px;
     }
+
     @include media-breakpoint-down(sm) {
         h1{
             font-size: 40px;
@@ -75,6 +76,7 @@ body, html {
 
 #title{ 
   padding-top: 4.5rem; /*to offset content for the fixed navigation*/
+  height: 50em;
 }
 
 #title p{
@@ -281,6 +283,13 @@ section .container{
     padding-bottom: 100px;
 }
 
+@include media-breakpoint-down(lg) {
+  section .container{
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+}
+
 @mixin cover($i, $url) {
   &:nth-child(#{$i}) {
     &:after {
@@ -317,12 +326,13 @@ section .container{
       height: 50em;
       width: 100%;
       background:     
-        linear-gradient(90deg, $purple, rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
+        linear-gradient(90deg, $indigo, rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       background-attachment: fixed;
+      background-position: calc(100%) center;
       
     }
     // @include cover(1, "../assets/child-taking-photo.png");
@@ -335,7 +345,7 @@ section .container{
 
     #share::after {
       background:     
-        linear-gradient(90deg, $purple, rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
+        linear-gradient(90deg, $indigo, rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -346,16 +356,16 @@ section .container{
 }
 
 #logo{
-  min-height: 16px;
-  width: 150px;
+  min-height: 27px;
+  width: 212px;
   background-image: url('../assets/logo.svg');
   background-repeat: no-repeat;
 }
 
 
 .navbar-dark #logo{
-  min-height: 16px;
-  width: 150px;
+  min-height: 27px;
+  width: 212px;
   background-image: url('../assets/logo-light.svg');
   background-repeat: no-repeat;
 }
