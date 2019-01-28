@@ -14,15 +14,12 @@ function check_if_in_view() {
     var element_delay = $element.index();
 
     //check to see if this current container is within viewport
-    if ((element_bottom_position + element_delay*150 >= window_top_position) &&
-      (element_top_position + element_delay*150 <= window_bottom_position)) {
-      $element.addClass('in-view');
+    if ((element_bottom_position >= window_top_position) &&
+      (element_top_position <= window_bottom_position)) {
 
-      // setTimeout(function(){ 
-      //   $element.addClass('in-view'); 
-      // },6000)
-    } else {
-      // $element.removeClass('in-view');
+      setTimeout(function() {
+        $element.addClass('in-view');
+      }, element_delay * 150);
     }
   });
 }

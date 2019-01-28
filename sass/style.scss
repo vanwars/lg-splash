@@ -75,8 +75,8 @@ body, html {
 }
 
 #title{ 
-  padding-top: 4.5rem; /*to offset content for the fixed navigation*/
-  height: 50em;
+  padding-top: 3rem; /*to offset content for the fixed navigation*/
+  height: 45em;
 }
 
 #title p{
@@ -344,22 +344,18 @@ section .container{
       background-repeat: no-repeat;
       height: 50em;
       width: 100%;
-      background:     
-        linear-gradient(90deg, $indigo, rgba(6, 0, 104, 0)), url("../assets/child-taking-photo.png") no-repeat;
+      background: 
+        linear-gradient(90deg, $indigo, rgba(6, 0, 104, 0)), 
+        url("../assets/bubble.png") no-repeat,
+        url("../assets/child-taking-photo.png") no-repeat;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       background-attachment: fixed;
-      background-position: calc(100%) center;
+      background-position: calc(70%) center;
       
     }
-    // @include cover(1, "../assets/child-taking-photo.png");
-    // @include cover(2, "http://cdn.eyeem.com/thumb/h/800/4f488e1db3960b9ba1246125e8181e7741564b62-1370076361");
-    // @include cover(3, "http://cdn.eyeem.com/thumb/h/800/8484e67f9b7bef4b2e00ddf0f353f036b4b0e9e6-1348396364");
-    // @include cover(4, "http://cdn.eyeem.com/thumb/h/800/704e38b95cb808b0df338a9661007f93ce3bed98-1348321831");
-    // @include cover(5, "http://cdn.eyeem.com/thumb/h/800/20b3440516db8c8df4490b17ba3109d91c07f839-1348321287");
-    // @include cover(6, "http://cdn.eyeem.com/thumb/h/800/d90429ba407c439beae9d23e468dc9c1deb7efdd-1348357036");
   }
 
     #share::after {
@@ -387,5 +383,23 @@ section .container{
   width: 212px;
   background-image: url('../assets/logo-light.svg');
   background-repeat: no-repeat;
+}
+
+
+.lock-map-animation{
+  max-width:400px;
+  margin:auto;
+
+  img{
+    &:first-child{
+      z-index:2;
+    }
+    &:nth-child(2){
+      z-index:1;
+    }
+    &:nth-child(3){
+      z-index:3;
+    }
+  }
 }
 
