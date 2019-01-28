@@ -1,6 +1,8 @@
 var $animation_elements = $('.animation-element');
 var $window = $(window);
 
+
+/*Check position of animated elements*/
 function check_if_in_view() {
   var window_height = $window.height();
   var window_top_position = $window.scrollTop();
@@ -19,11 +21,13 @@ function check_if_in_view() {
 
       setTimeout(function() {
         $element.addClass('in-view');
-      }, element_delay * 150);
+      }, element_delay * 160);
     }
   });
 }
 
+
+/*Navigation Invert*/
 function toggle_scroll() {
   var window_height = $window.scrollTop();
   var navBar = $( "#topNavbar");
